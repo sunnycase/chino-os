@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MiniDemo.Managed": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Work\\Repository\\chino-os\\src\\x64\\Debug\\MiniDemo.exe"
+    }
+  }
+}

@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gc\env\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\etmdummy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.ee.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.interlocked.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.os.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\env\gcenv.sync.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcdesc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcimpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcinterface.ee.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcinterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcpriv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcrecord.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\gcscan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\handletable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\handletablepriv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\objecthandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gc\softwarewritewatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\CommonTypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\daccess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\DebugEvents.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\DebugMacrosExt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\eetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\gcinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\ModuleHeaders.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\OptionalFieldDefinitions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\OptionalFields.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\rhbinder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\stressLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\TargetPtrs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\type_traits.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\varint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\WellKnownEntryPoints.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\WellKnownMethodList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\inc\WellKnownMethods.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\allocheap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\AsmOffsets.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\CachedInterfaceDispatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\CallDescr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\CommonMacros.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\Crst.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\Debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\DebugEventSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\DebugFuncEval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\DebuggerHook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\EtwEvents.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\eventtrace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\eventtracebase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\eventtracepriv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\forward_declarations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\gcdump.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\gcenv.ee.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\gcenv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\gcheaputilities.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\GCMemoryHelpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\gcrhinterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\GcStressControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\GenericUnification.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\holder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\ICodeManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\loglf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\module.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\ObjectLayout.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\PalRedhawk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\PalRedhawkCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\PalRedhawkFunctions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\profheapwalkhelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\Range.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RedhawkWarnings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\regdisplay.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RestrictedCallouts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\rhassert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RHCodeMan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\rhcommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RhConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RhConfigValues.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\rheventtrace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RuntimeInstance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\RWLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\SectionMethodList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\sha1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\shash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\slist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\SpinLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\StackFrameIterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\SyncClean.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\thread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\threadstore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\TypeManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\Volatile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\amd64\AsmOffsetsCpu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\PalRedhawkInline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\CoffNativeCodeManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\coreclr\bitvector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\coreclr\gcinfodecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vm\coreclr\gcinfotypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MiniDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\env\common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gccommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gceesvr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gceewks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gcscan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gcsvr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\gcwks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\handletable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\handletablecache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\handletablecore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\handletablescan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\objecthandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gc\softwarewritewatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\allocheap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\AsmOffsetsVerify.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\CachedInterfaceDispatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\Crst.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\DebugEventSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\DebugFuncEval.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\DebuggerHook.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\eetype.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\EHHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\event.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\FinalizerHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\gcheaputilities.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\GCHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\GCMemoryHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\gcrhenv.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\gcrhscan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\GcStressControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\GenericUnification.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\HandleTableHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\MathHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\MiscHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\ObjectLayout.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\OptionalFieldsRuntime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\portable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\profheapwalkhelper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\Profiling.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\RestrictedCallouts.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\rhassert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\RhConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\RuntimeInstance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\RWLock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\SectionMethodList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\sha1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\StackFrameIterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\startup.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\stressLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\strongname.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\SyncClean.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\thread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\threadstore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\ThunksMapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\TypeManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\UniversalTransitionHelpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\PalRedhawkCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\PalRedhawkMinWin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vm\CoffNativeCodeManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gc\env\gcenv.interlocked.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="gc\gcenv.ee.standalone.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="gc\handletable.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\inc\eetype.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\inc\OptionalFields.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\CommonMacros.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\GCMemoryHelpers.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\shash.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\slist.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\thread.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\threadstore.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="vm\amd64\AsmMacros.inc">
+      <Filter>头文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="vm\amd64\CallingConventionConverterHelpers.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\AllocFast.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\CallDescrWorker.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\ExceptionHandling.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\FloatingPoint.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\GC.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\GcProbe.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\GetThread.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\Interlocked.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\InteropThunksHelpers.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\MemClrForGC.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\MiscStubs.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\PInvoke.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\StubDispatch.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\ThunkPoolThunks.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\UniversalTransition.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+    <MASM Include="vm\amd64\WriteBarriers.asm">
+      <Filter>源文件</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

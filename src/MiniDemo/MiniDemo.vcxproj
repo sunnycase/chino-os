@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{3532A986-08C8-43D9-B283-B83A5B39F88B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MiniDemo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)gc;$(ProjectDir)gc\env;$(ProjectDir)vm;$(ProjectDir)vm\inc;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)gc;$(ProjectDir)gc\env;$(ProjectDir)vm;$(ProjectDir)vm\inc;$(ProjectDir)vm\amd64;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)gc;$(ProjectDir)gc\env;$(ProjectDir)vm;$(ProjectDir)vm\inc;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)gc;$(ProjectDir)gc\env;$(ProjectDir)vm;$(ProjectDir)vm\inc;$(ProjectDir)vm\amd64;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)System.Private.CoreLib\bin\Debug\netstandard2.0\System.Private.CoreLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);BIT64;FEATURE_BACKGROUND_GC;FEATURE_BASICFREEZE;FEATURE_CONSERVATIVE_GC;FEATURE_CUSTOM_IMPORTS;FEATURE_DYNAMIC_CODE;FEATURE_GC_STRESS;FEATURE_REDHAWK;VERIFY_HEAP;CORERT;FEATURE_CACHED_INTERFACE_DISPATCH;_LIB;EETYPE_TYPE_MANAGER;FEATURE_EMBEDDED_CONFIG;_AMD64_;_TARGET_AMD64_</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)MiniDemo.Managed\bin\Debug\netstandard2.0\MiniDemo.Managed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <MASM>
+      <PreprocessorDefinitions>_CONSOLE;%(PreprocessorDefinitions);BIT64;FEATURE_BACKGROUND_GC;FEATURE_BASICFREEZE;FEATURE_CONSERVATIVE_GC;FEATURE_CUSTOM_IMPORTS;FEATURE_DYNAMIC_CODE;FEATURE_GC_STRESS;FEATURE_REDHAWK;VERIFY_HEAP;CORERT;FEATURE_CACHED_INTERFACE_DISPATCH;_LIB;EETYPE_TYPE_MANAGER;FEATURE_EMBEDDED_CONFIG;_AMD64_;_TARGET_AMD64_</PreprocessorDefinitions>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)System.Private.CoreLib\bin\Debug\netstandard2.0\System.Private.CoreLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);BIT64;FEATURE_BACKGROUND_GC;FEATURE_BASICFREEZE;FEATURE_CONSERVATIVE_GC;FEATURE_CUSTOM_IMPORTS;FEATURE_DYNAMIC_CODE;FEATURE_REDHAWK;VERIFY_HEAP;CORERT;FEATURE_CACHED_INTERFACE_DISPATCH;_LIB;EETYPE_TYPE_MANAGER;FEATURE_EMBEDDED_CONFIG;_AMD64_;_TARGET_AMD64_</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)MiniDemo.Managed\bin\Debug\netstandard2.0\MiniDemo.Managed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <MASM>
+      <PreprocessorDefinitions>BIT64;FEATURE_BACKGROUND_GC;FEATURE_BASICFREEZE;FEATURE_CONSERVATIVE_GC;FEATURE_CUSTOM_IMPORTS;FEATURE_DYNAMIC_CODE;FEATURE_REDHAWK;VERIFY_HEAP;CORERT;FEATURE_CACHED_INTERFACE_DISPATCH;_LIB;EETYPE_TYPE_MANAGER;FEATURE_EMBEDDED_CONFIG;_AMD64_;_TARGET_AMD64_</PreprocessorDefinitions>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="gc\env\common.h" />
+    <ClInclude Include="gc\env\etmdummy.h" />
+    <ClInclude Include="gc\env\gcenv.base.h" />
+    <ClInclude Include="gc\env\gcenv.ee.h" />
+    <ClInclude Include="gc\env\gcenv.interlocked.h" />
+    <ClInclude Include="gc\env\gcenv.object.h" />
+    <ClInclude Include="gc\env\gcenv.os.h" />
+    <ClInclude Include="gc\env\gcenv.structs.h" />
+    <ClInclude Include="gc\env\gcenv.sync.h" />
+    <ClInclude Include="gc\gc.h" />
+    <ClInclude Include="gc\gcdesc.h" />
+    <ClInclude Include="gc\gcimpl.h" />
+    <ClInclude Include="gc\gcinterface.ee.h" />
+    <ClInclude Include="gc\gcinterface.h" />
+    <ClInclude Include="gc\gcpriv.h" />
+    <ClInclude Include="gc\gcrecord.h" />
+    <ClInclude Include="gc\gcscan.h" />
+    <ClInclude Include="gc\handletable.h" />
+    <ClInclude Include="gc\handletablepriv.h" />
+    <ClInclude Include="gc\objecthandle.h" />
+    <ClInclude Include="gc\softwarewritewatch.h" />
+    <ClInclude Include="vm\allocheap.h" />
+    <ClInclude Include="vm\amd64\AsmOffsetsCpu.h" />
+    <ClInclude Include="vm\AsmOffsets.h" />
+    <ClInclude Include="vm\CachedInterfaceDispatch.h" />
+    <ClInclude Include="vm\CallDescr.h" />
+    <ClInclude Include="vm\CoffNativeCodeManager.h" />
+    <ClInclude Include="vm\CommonMacros.h" />
+    <ClInclude Include="vm\coreclr\bitvector.h" />
+    <ClInclude Include="vm\coreclr\gcinfodecoder.h" />
+    <ClInclude Include="vm\coreclr\gcinfotypes.h" />
+    <ClInclude Include="vm\Crst.h" />
+    <ClInclude Include="vm\Debug.h" />
+    <ClInclude Include="vm\DebugEventSource.h" />
+    <ClInclude Include="vm\DebugFuncEval.h" />
+    <ClInclude Include="vm\DebuggerHook.h" />
+    <ClInclude Include="vm\EtwEvents.h" />
+    <ClInclude Include="vm\event.h" />
+    <ClInclude Include="vm\eventtrace.h" />
+    <ClInclude Include="vm\eventtracebase.h" />
+    <ClInclude Include="vm\eventtracepriv.h" />
+    <ClInclude Include="vm\forward_declarations.h" />
+    <ClInclude Include="vm\gcdump.h" />
+    <ClInclude Include="vm\gcenv.ee.h" />
+    <ClInclude Include="vm\gcenv.h" />
+    <ClInclude Include="vm\gcheaputilities.h" />
+    <ClInclude Include="vm\GCMemoryHelpers.h" />
+    <ClInclude Include="vm\gcrhinterface.h" />
+    <ClInclude Include="vm\GcStressControl.h" />
+    <ClInclude Include="vm\GenericUnification.h" />
+    <ClInclude Include="vm\holder.h" />
+    <ClInclude Include="vm\ICodeManager.h" />
+    <ClInclude Include="vm\inc\CommonTypes.h" />
+    <ClInclude Include="vm\inc\daccess.h" />
+    <ClInclude Include="vm\inc\DebugEvents.h" />
+    <ClInclude Include="vm\inc\DebugMacrosExt.h" />
+    <ClInclude Include="vm\inc\eetype.h" />
+    <ClInclude Include="vm\inc\gcinfo.h" />
+    <ClInclude Include="vm\inc\ModuleHeaders.h" />
+    <ClInclude Include="vm\inc\OptionalFieldDefinitions.h" />
+    <ClInclude Include="vm\inc\OptionalFields.h" />
+    <ClInclude Include="vm\inc\rhbinder.h" />
+    <ClInclude Include="vm\inc\stressLog.h" />
+    <ClInclude Include="vm\inc\TargetPtrs.h" />
+    <ClInclude Include="vm\inc\type_traits.hpp" />
+    <ClInclude Include="vm\inc\varint.h" />
+    <ClInclude Include="vm\inc\WellKnownEntryPoints.h" />
+    <ClInclude Include="vm\inc\WellKnownMethodList.h" />
+    <ClInclude Include="vm\inc\WellKnownMethods.h" />
+    <ClInclude Include="vm\loglf.h" />
+    <ClInclude Include="vm\module.h" />
+    <ClInclude Include="vm\ObjectLayout.h" />
+    <ClInclude Include="vm\PalRedhawk.h" />
+    <ClInclude Include="vm\PalRedhawkCommon.h" />
+    <ClInclude Include="vm\PalRedhawkFunctions.h" />
+    <ClInclude Include="vm\PalRedhawkInline.h" />
+    <ClInclude Include="vm\profheapwalkhelper.h" />
+    <ClInclude Include="vm\Range.h" />
+    <ClInclude Include="vm\RedhawkWarnings.h" />
+    <ClInclude Include="vm\regdisplay.h" />
+    <ClInclude Include="vm\RestrictedCallouts.h" />
+    <ClInclude Include="vm\rhassert.h" />
+    <ClInclude Include="vm\RHCodeMan.h" />
+    <ClInclude Include="vm\rhcommon.h" />
+    <ClInclude Include="vm\RhConfig.h" />
+    <ClInclude Include="vm\RhConfigValues.h" />
+    <ClInclude Include="vm\rheventtrace.h" />
+    <ClInclude Include="vm\RuntimeInstance.h" />
+    <ClInclude Include="vm\RWLock.h" />
+    <ClInclude Include="vm\SectionMethodList.h" />
+    <ClInclude Include="vm\sha1.h" />
+    <ClInclude Include="vm\shash.h" />
+    <ClInclude Include="vm\slist.h" />
+    <ClInclude Include="vm\SpinLock.h" />
+    <ClInclude Include="vm\StackFrameIterator.h" />
+    <ClInclude Include="vm\SyncClean.hpp" />
+    <ClInclude Include="vm\thread.h" />
+    <ClInclude Include="vm\threadstore.h" />
+    <ClInclude Include="vm\TypeManager.h" />
+    <ClInclude Include="vm\Volatile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gc\env\common.cpp" />
+    <ClCompile Include="gc\gccommon.cpp" />
+    <ClCompile Include="gc\gceesvr.cpp" />
+    <ClCompile Include="gc\gceewks.cpp" />
+    <ClCompile Include="gc\gcscan.cpp" />
+    <ClCompile Include="gc\gcsvr.cpp" />
+    <ClCompile Include="gc\gcwks.cpp" />
+    <ClCompile Include="gc\handletable.cpp" />
+    <ClCompile Include="gc\handletablecache.cpp" />
+    <ClCompile Include="gc\handletablecore.cpp" />
+    <ClCompile Include="gc\handletablescan.cpp" />
+    <ClCompile Include="gc\objecthandle.cpp" />
+    <ClCompile Include="gc\softwarewritewatch.cpp" />
+    <ClCompile Include="MiniDemo.cpp" />
+    <ClCompile Include="vm\allocheap.cpp" />
+    <ClCompile Include="vm\AsmOffsetsVerify.cpp" />
+    <ClCompile Include="vm\CachedInterfaceDispatch.cpp" />
+    <ClCompile Include="vm\CoffNativeCodeManager.cpp" />
+    <ClCompile Include="vm\Crst.cpp" />
+    <ClCompile Include="vm\DebugEventSource.cpp" />
+    <ClCompile Include="vm\DebugFuncEval.cpp" />
+    <ClCompile Include="vm\DebuggerHook.cpp" />
+    <ClCompile Include="vm\eetype.cpp" />
+    <ClCompile Include="vm\EHHelpers.cpp" />
+    <ClCompile Include="vm\event.cpp" />
+    <ClCompile Include="vm\FinalizerHelpers.cpp" />
+    <ClCompile Include="vm\gcheaputilities.cpp" />
+    <ClCompile Include="vm\GCHelpers.cpp" />
+    <ClCompile Include="vm\GCMemoryHelpers.cpp" />
+    <ClCompile Include="vm\gcrhenv.cpp" />
+    <ClCompile Include="vm\gcrhscan.cpp" />
+    <ClCompile Include="vm\GcStressControl.cpp" />
+    <ClCompile Include="vm\GenericUnification.cpp" />
+    <ClCompile Include="vm\HandleTableHelpers.cpp" />
+    <ClCompile Include="vm\MathHelpers.cpp" />
+    <ClCompile Include="vm\MiscHelpers.cpp" />
+    <ClCompile Include="vm\ObjectLayout.cpp" />
+    <ClCompile Include="vm\OptionalFieldsRuntime.cpp" />
+    <ClCompile Include="vm\PalRedhawkCommon.cpp" />
+    <ClCompile Include="vm\PalRedhawkMinWin.cpp" />
+    <ClCompile Include="vm\portable.cpp" />
+    <ClCompile Include="vm\profheapwalkhelper.cpp" />
+    <ClCompile Include="vm\Profiling.cpp" />
+    <ClCompile Include="vm\RestrictedCallouts.cpp" />
+    <ClCompile Include="vm\rhassert.cpp" />
+    <ClCompile Include="vm\RhConfig.cpp" />
+    <ClCompile Include="vm\RuntimeInstance.cpp" />
+    <ClCompile Include="vm\RWLock.cpp" />
+    <ClCompile Include="vm\SectionMethodList.cpp" />
+    <ClCompile Include="vm\sha1.cpp" />
+    <ClCompile Include="vm\StackFrameIterator.cpp" />
+    <ClCompile Include="vm\startup.cpp" />
+    <ClCompile Include="vm\stressLog.cpp" />
+    <ClCompile Include="vm\strongname.cpp" />
+    <ClCompile Include="vm\SyncClean.cpp" />
+    <ClCompile Include="vm\thread.cpp" />
+    <ClCompile Include="vm\threadstore.cpp" />
+    <ClCompile Include="vm\ThunksMapping.cpp" />
+    <ClCompile Include="vm\TypeManager.cpp" />
+    <ClCompile Include="vm\UniversalTransitionHelpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gc\env\gcenv.interlocked.inl" />
+    <None Include="gc\gcenv.ee.standalone.inl" />
+    <None Include="gc\handletable.inl" />
+    <MASM Include="vm\amd64\AllocFast.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <None Include="vm\amd64\AsmMacros.inc" />
+    <MASM Include="vm\amd64\CallDescrWorker.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\CallingConventionConverterHelpers.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\ExceptionHandling.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\FloatingPoint.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\GC.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\GcProbe.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\GetThread.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\Interlocked.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\InteropThunksHelpers.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\MemClrForGC.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\MiscStubs.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\PInvoke.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\StubDispatch.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\ThunkPoolThunks.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\UniversalTransition.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="vm\amd64\WriteBarriers.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <None Include="vm\CommonMacros.inl" />
+    <None Include="vm\GCMemoryHelpers.inl" />
+    <None Include="vm\inc\eetype.inl" />
+    <None Include="vm\inc\OptionalFields.inl" />
+    <None Include="vm\shash.inl" />
+    <None Include="vm\slist.inl" />
+    <None Include="vm\thread.inl" />
+    <None Include="vm\threadstore.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

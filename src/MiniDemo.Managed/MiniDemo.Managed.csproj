@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\System.Private.CoreLib\System.Private.CoreLib.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)'=='Debug'">
+    <Exec Command="$(SolutionDir)..\tools\ilc\ilc $(TargetPath) -r:$(SolutionDir)System.Private.CoreLib\$(OutDir)System.Private.CoreLib.dll -o:$(TargetDir)$(TargetName).lib --nativelib -g" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)'=='Release'">
+    <Exec Command="$(SolutionDir)..\tools\ilc\ilc $(TargetPath) -r:$(SolutionDir)System.Private.CoreLib\$(OutDir)System.Private.CoreLib.dll -o:$(TargetDir)$(TargetName).lib --nativelib" />
+  </Target>
+
+</Project>
